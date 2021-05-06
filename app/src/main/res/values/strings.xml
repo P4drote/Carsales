@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Carsales prueba</string>
+    <string name="confirmed_cases">Casos confirmados:</string>
+    <string name="number_of_deceased_people">Cantidad de personas fallecidas:</string>
+</resources>
