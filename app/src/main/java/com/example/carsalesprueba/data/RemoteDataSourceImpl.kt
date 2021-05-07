@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 class RemoteDataSourceImpl @Inject constructor(private val webService: WebService) :
     RemoteDataSource {
-    override suspend fun getCoronavirusInformation(date: String): Resource<List<Statistic>> {
-        return webService.getCoronavirusInformation()
+    override suspend fun getCoronavirusInformation(date: String): Resource<Statistic> {
+        return Resource.Success(webService.getCoronavirusInformation(date).data)
     }
 }
