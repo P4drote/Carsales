@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tile_confirmed_cases"
+        android:id="@+id/title_confirmed_cases"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -35,10 +35,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tile_confirmed_cases"
-        app:layout_constraintEnd_toStartOf="@+id/tile_confirmed_cases"
-        app:layout_constraintTop_toTopOf="@+id/tile_confirmed_cases"
-        app:srcCompat="@drawable/bullet" />
+        app:layout_constraintBottom_toBottomOf="@+id/title_confirmed_cases"
+        app:layout_constraintEnd_toStartOf="@+id/title_confirmed_cases"
+        app:layout_constraintTop_toTopOf="@+id/title_confirmed_cases"
+        app:srcCompat="@drawable/bullet"
+        android:contentDescription="@string/bullet" />
 
     <TextView
         android:id="@+id/title_number_of_deceased_people"
@@ -49,7 +50,7 @@
         android:fontFamily="@font/roboto_medium"
         android:text="@string/number_of_deceased_people"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tile_confirmed_cases" />
+        app:layout_constraintTop_toBottomOf="@+id/title_confirmed_cases" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -59,7 +60,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/title_number_of_deceased_people"
         app:layout_constraintEnd_toStartOf="@+id/title_number_of_deceased_people"
         app:layout_constraintTop_toTopOf="@+id/title_number_of_deceased_people"
-        app:srcCompat="@drawable/bullet" />
+        app:srcCompat="@drawable/bullet"
+        android:contentDescription="@string/bullet" />
 
     <ImageView
         android:id="@+id/image"
@@ -68,6 +70,7 @@
         android:layout_marginStart="96dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="96dp"
+        android:contentDescription="@string/image_to_alert"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_number_of_deceased_people"
@@ -81,7 +84,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image"
-        app:srcCompat="@drawable/button_select_date" />
+        app:srcCompat="@drawable/button_select_date"
+        android:contentDescription="@string/button_for_select_new_date" />
 
     <TextView
         android:id="@+id/case_number"
@@ -90,9 +94,9 @@
         android:layout_marginStart="8dp"
         android:fontFamily="@font/roboto_medium"
         tools:text="1312312"
-        app:layout_constraintBottom_toBottomOf="@+id/tile_confirmed_cases"
-        app:layout_constraintStart_toEndOf="@+id/tile_confirmed_cases"
-        app:layout_constraintTop_toTopOf="@+id/tile_confirmed_cases" />
+        app:layout_constraintBottom_toBottomOf="@+id/title_confirmed_cases"
+        app:layout_constraintStart_toEndOf="@+id/title_confirmed_cases"
+        app:layout_constraintTop_toTopOf="@+id/title_confirmed_cases" />
 
     <TextView
         android:id="@+id/decesed_number"
@@ -104,5 +108,17 @@
         app:layout_constraintBottom_toBottomOf="@+id/title_number_of_deceased_people"
         app:layout_constraintStart_toEndOf="@+id/title_number_of_deceased_people"
         app:layout_constraintTop_toTopOf="@+id/title_number_of_deceased_people" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
