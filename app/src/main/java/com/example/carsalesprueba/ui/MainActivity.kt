@@ -29,12 +29,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setTheme(R.style.Theme_CarsalesPrueba)
 
-        setupHour()
+        setupBeginningDate()
         setupObserver()
         setupListener()
     }
 
-    private fun setupHour() {
+    private fun setupBeginningDate() {
         val calendar = Calendar.getInstance()
         calendar.add(Calendar.DATE, -1)
         val minusOneDay = calendar.time
@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
         showCurrentDate(minusOneDay)
         viewModel.setDate(date)
     }
-
 
     private fun showCurrentDate(minusOneDay: Date) {
         val day = SimpleDateFormat("dd", Locale.US).format(minusOneDay)
