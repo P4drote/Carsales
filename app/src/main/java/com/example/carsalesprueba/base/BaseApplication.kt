@@ -1,4 +1,4 @@
-package com.example.carsalesprueba
+package com.example.carsalesprueba.base
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
