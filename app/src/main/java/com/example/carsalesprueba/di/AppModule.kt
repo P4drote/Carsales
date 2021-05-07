@@ -1,5 +1,6 @@
 package com.example.carsalesprueba.di
 
+import com.example.carsalesprueba.domain.MyInterceptor
 import com.example.carsalesprueba.domain.WebService
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -19,7 +20,7 @@ class AppModule {
     @Singleton
     private val okHttpClient = HttpLoggingInterceptor().run {
         level = HttpLoggingInterceptor.Level.BODY
-        OkHttpClient.Builder().addInterceptor(this).build()
+        OkHttpClient.Builder().addInterceptor(MyInterceptor()).build()
     }
 
     @Provides
