@@ -20,19 +20,22 @@ class DatePickerFragment(val listener: (day: Int, month: Int, year: Int) -> Unit
         val month = calendar.get(Calendar.MONTH)
         val day = calendar.get(Calendar.DAY_OF_MONTH)
         val picker = DatePickerDialog(activity as Context, this, year, month, day)
-        picker.datePicker.minDate = setupMinDate(calendar)
-        picker.datePicker.maxDate = setupMaxDate(calendar)
+        picker.datePicker.minDate = setupMinDate()
+        picker.datePicker.maxDate = setupMaxDate()
         return picker
     }
 
-    private fun setupMinDate(calendar: Calendar): Long {
-        calendar.add(Calendar.YEAR, 2020)
-        calendar.add(Calendar.MONTH, 3)
-        return  calendar.timeInMillis
+    private fun setupMinDate(): Long {
+        val minDate = Calendar.getInstance()
+        minDate.set(Calendar.YEAR, 2020)
+        minDate.set(Calendar.MONTH, 2)
+        minDate.set(Calendar.DAY_OF_MONTH, 1)
+        return minDate.timeInMillis
     }
 
-    private fun setupMaxDate(calendar: Calendar): Long {
-        calendar.add(Calendar.DAY_OF_YEAR, -1)
-        return calendar.timeInMillis
+    private fun setupMaxDate(): Long {
+        val maxDate = Calendar.getInstance()
+        maxDate.add(Calendar.DAY_OF_YEAR, -1)
+        return maxDate.timeInMillis
     }
 }
