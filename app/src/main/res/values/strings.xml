@@ -2,4 +2,7 @@
     <string name="app_name">Carsales prueba</string>
     <string name="confirmed_cases">Casos confirmados:</string>
     <string name="number_of_deceased_people">Cantidad de personas fallecidas:</string>
+    <string name="image_to_alert">Image to alert</string>
+    <string name="button_for_select_new_date">Button for select new date</string>
+    <string name="bullet">bullet</string>
 </resources>
