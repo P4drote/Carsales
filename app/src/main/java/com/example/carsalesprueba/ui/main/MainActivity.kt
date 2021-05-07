@@ -1,4 +1,4 @@
-package com.example.carsalesprueba.ui
+package com.example.carsalesprueba.ui.main
 
 import android.annotation.SuppressLint
 import android.os.Bundle

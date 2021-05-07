@@ -1,4 +1,4 @@
-package com.example.carsalesprueba.ui
+package com.example.carsalesprueba.ui.main
 
 import androidx.lifecycle.*
 import com.example.carsalesprueba.data.RemoteRepository
